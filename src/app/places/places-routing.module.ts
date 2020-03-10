@@ -4,6 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { PlacesPage } from './places.page';
 
 const routes: Routes = [
+  // to be checked for redirection
+  { path: '', redirectTo: 'discover', pathMatch: 'full' },
   {
     path: '',
     component: PlacesPage,

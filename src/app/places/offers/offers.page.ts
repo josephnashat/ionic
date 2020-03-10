@@ -1,3 +1,5 @@
+import { OffersService } from './../service/offers.service';
+import { Offer } from './../model/offer.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OffersPage implements OnInit {
 
-  constructor() { }
+  loadedOffers: Offer[];
+  constructor(private offersService: OffersService) {}
 
   ngOnInit() {
+    this.loadedOffers = this.offersService.offers;
   }
-
 }
